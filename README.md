@@ -36,7 +36,7 @@ Check Yii2 standard
 $ phpcs -i
 ```
 
-Set Yii as coding standard by default:
+Set Yii2 as coding standard by default:
 
 ```
 $ phpcs --config-set default_standard Yii2
