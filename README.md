@@ -27,7 +27,7 @@ $ composer global require "squizlabs/php_codesniffer=*"
 
 ```
 $ cd yii2-coding-standards
-$ cp -r Yii2 ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/
+$ cp -r Yii2 ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/Yii2
 ```
 
 Check Yii2 standard
