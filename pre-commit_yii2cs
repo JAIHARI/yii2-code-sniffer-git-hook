@@ -8,7 +8,7 @@
  */
 
 // Building an array of ignored files and folders.
-$file_path = __DIR__ . '/../../../.hooks_ignore';
+$file_path = __DIR__ . '/../../.hooks_ignore';
 $ignore = array();
 if (file_exists($file_path)) {
   $file = fopen($file_path, "r");
