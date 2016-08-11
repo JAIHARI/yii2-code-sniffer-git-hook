@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+info "Configure Code Sniffer Git Hook"
+
 FULL_PATH="$(cd "$(dirname "$1")"; pwd)/$(basename "$1")"
 STANDARD_PATH=${FULL_PATH}"vendor/yiisoft/yii2-coding-standards/Yii2"
 
