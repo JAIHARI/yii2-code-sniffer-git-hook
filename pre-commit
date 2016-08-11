@@ -11,36 +11,40 @@
 
 /**
  * Get an array containing paths of all files in the specified tree.
+ * @param string $dir
+ * @return array
  */
-function find_all_files($dir = '.') {
-  $root = scandir($dir);
+function find_all_files($dir = '.')
+{
+    $root = scandir($dir);
 
-  // Ignore . and .. dirs.
-  foreach ($root as $value) {
-    if ($value === '.' || $value === '..') {
-      continue;
-    }
-    // Found a file? Store it.
-    if (is_file("$dir/$value")) {
-      $result[] = "$dir/$value";
-      continue;
+    // Ignore . and .. dirs.
+    foreach ($root as $value) {
+        if ($value === '.' || $value === '..') {
+            continue;
+        }
+
+        // Found a file? Store it.
+        if (is_file("$dir/$value")) {
+            $result[] = "$dir/$value";
+            continue;
+        }
+
+        // Traverse the sub directories.
+        foreach (find_all_files("$dir/$value") as $value) {
+            $result[] = $value;
+        }
     }
 
-    // Traverse the sub directories.
-    foreach (find_all_files("$dir/$value") as $value) {
-      $result[] = $value;
-    }
-  }
-
-  return $result;
+    return $result;
 }
 
 
 // What is the .git directory for this project?
 $git_dir = trim(`echo $(git rev-parse --git-dir 2>/dev/null)`);
 if (empty($git_dir)) {
-  echo 'fatal: hooks/functions: GIT_DIR not set"';
-  exit(1);
+    echo 'fatal: hooks/functions: GIT_DIR not set"';
+    exit(1);
 }
 
 // Get a list of all the files in the git hooks directory.
@@ -48,12 +52,12 @@ $files = find_all_files($git_dir . '/hooks');
 
 // Search for correctly named files and execute them.
 foreach ($files as $file) {
-  if (substr(basename($file), 0, 11) == 'pre-commit_') {
-    if (is_executable($file)) {
-      system($file, $ret);
-      if ($ret != 0) {
-        exit($ret);
-      }
+    if (substr(basename($file), 0, 11) == 'pre-commit_') {
+        if (is_executable($file)) {
+            system($file, $ret);
+            if ($ret != 0) {
+                exit($ret);
+            }
+        }
     }
-  }
 }

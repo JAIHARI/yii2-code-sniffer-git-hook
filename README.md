@@ -47,7 +47,7 @@ $ phpcs --config-set default_standard Yii2
 ```
 $ git clone git@github.com:RichWeber/yii2-code-sniffer-git-hook.git
 $ cp yii2-code-sniffer-git-hook/pre-commit /YOUR_PROJECT/.git/hooks/pre-commit
-$ cp yii2-code-sniffer-git-hook/pre-commit /YOUR_PROJECT/.git/hooks/pre-commit_yii2cs
+$ cp yii2-code-sniffer-git-hook/pre-commit_yii2cs /YOUR_PROJECT/.git/hooks/pre-commit_yii2cs
 $ cp yii2-code-sniffer-git-hook/.hooks_ignore /YOUR_PROJECT/.hooks_ignore
 ```
 
