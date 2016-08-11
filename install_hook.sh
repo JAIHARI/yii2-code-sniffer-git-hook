@@ -10,6 +10,6 @@ cp -rf ${STANDARD_PATH} ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer
 ~/.composer/vendor/bin/phpcs --config-set default_standard Yii2
 
 # Install Git hooks
-cp ${FULL_PATH}"vendor/RichWeber/yii2-code-sniffer-git-hook/pre-commit" ${FULL_PATH}".git/hooks/pre-commit"
-cp ${FULL_PATH}"vendor/RichWeber/yii2-code-sniffer-git-hook/pre-commit_yii2cs" ${FULL_PATH}".git/hooks/pre-commit_yii2cs"
-cp ${FULL_PATH}"vendor/RichWeber/yii2-code-sniffer-git-hook/.hooks_ignore" ${FULL_PATH}".hooks_ignore"
+cp ${FULL_PATH}"vendor/richweber/yii2-code-sniffer-git-hook/pre-commit" ${FULL_PATH}".git/hooks/pre-commit"
+cp ${FULL_PATH}"vendor/richweber/yii2-code-sniffer-git-hook/pre-commit_yii2cs" ${FULL_PATH}".git/hooks/pre-commit_yii2cs"
+cp ${FULL_PATH}"vendor/richweber/yii2-code-sniffer-git-hook/.hooks_ignore" ${FULL_PATH}".hooks_ignore"

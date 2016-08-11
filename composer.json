@@ -1,5 +1,5 @@
 {
-  "name": "RichWeber/yii2-code-sniffer-git-hook",
+  "name": "richweber/yii2-code-sniffer-git-hook",
   "version":"0.1.1",
   "description": "Code Sniffer Git Hook",
   "keywords": ["yii2", "code", "sniffer", "git", "hook"],
@@ -25,6 +25,6 @@
     "psr-4": { "RichWeber\\sniffer\\githook\\": "" }
   },
   "scripts": {
-    "post-install-cmd": "vendor/RichWeber/yii2-code-sniffer-git-hook/install_hook.sh"
+    "post-install-cmd": "vendor/richweber/yii2-code-sniffer-git-hook/install_hook.sh"
   }
 }
