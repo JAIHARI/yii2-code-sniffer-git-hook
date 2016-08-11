@@ -1,0 +1,30 @@
+{
+  "name": "RichWeber/yii2-code-sniffer-git-hook",
+  "version":"0.1.1",
+  "description": "Code Sniffer Git Hook",
+  "keywords": ["yii2", "code", "sniffer", "git", "hook"],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/RichWeber/yii2-code-sniffer-git-hook/issues",
+    "wiki": "https://github.com/RichWeber/yii2-code-sniffer-git-hook/wiki",
+    "source": "https://github.com/RichWeber/yii2-code-sniffer-git-hook" 
+  },
+  "authors": [
+    {
+      "name": "RichWeber",
+      "email": "rbagatyi@gmail.com" 
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.8",
+    "yiisoft/yii2-coding-standards": ">=2.0.1"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": { "RichWeber\\sniffer\\githook\\": "" }
+  },
+  "scripts": {
+    "post-install-cmd": "vendor/RichWeber/yii2-code-sniffer-git-hook/install_hook.sh"
+  }
+}
